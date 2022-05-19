@@ -26,6 +26,10 @@ This Project explains briefly about CRUD operations using JSonPowerDB(JPDB)
 - To Update the UPDATE command can be used, it updates multiple records at a time and can add new column.
 - To Delete data from DB REMOVE command can be used.
 
+### JPDB Index Retrieval Language
+- To retrieve single record GET command can be used.
+- To retrieve multiple recors GET_ALL command can be used.
+
 ## Screenshots
 
 ![Dashboard](https://user-images.githubusercontent.com/105830749/169245093-231fd8f5-a7d0-485f-848f-96f0fcf1a92d.JPG)
