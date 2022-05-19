@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>jsonproject</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src=" http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js "></script>  
+    </head>
+    <body>
+        <div class="container">
+            <h2>Vertical (basic) form</h2>
+            <form id="empForm" method="post">
+                <div class="form-group">
+                    <span><label for="Houseid">House ID:</label> <label id="HouseidMsg">
+                        </label></span>
+                    <input type="text" class="form-control" name="Houseid" id="Houseid"
+                           placeholder="Enter House ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Person Name:</label>
+                    <input type="text" class="form-control" id="name"
+                           placeholder="Enter Person Name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email"
+                           placeholder="Enter Person Email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="mobileno">Mobile Number:</label>
+                    <input type="text" class="form-control" id="mobileno"
+                           placeholder="Enter Person Mobile Number" name="mobileno">
+                </div>
+                <input type="button" class="btn btn-primary" id="empSave" value="Save"
+                       onclick="saveEmployee();">
+            </form>
+        </div>
+        <script>
+            $("#Houseid").focus();
+            function validateAndGetFormData() {
+            var HouseidVar = $("#Houseid").val();
+                    if (HouseidVar === "") {
+            alert("House ID Required Value");
+                    $("#Houseid").focus();
+                    return "";
+                    }
+            var nameVar = $("#name").val();
+                    if (nameVar === "") {
+            alert("Person Name is Required Value");
+                    $("#name").focus();
+                    return "";
+                    }
+            var emailVar = $("#email").val();
+                    if (emailVar === "") {
+            alert("Person Email is Required Value");
+                    $("#email").focus();
+                    return "";
+                    var mobilenoVar = $("#mobileno").val();
+                    if (mobilenoVar === "") {
+            alert("Person Mobile no is Required Value");
+                    $("#mobileno").focus();
+                    return "";
+                    }
+            var jsonStrObj = {
+            Houseid: HouseidVar,
+                    name: nameVar,
+                    email: emailVar,
+                    mobileno: mobilenoVar 
+                   };
+                    return JSON.stringify(jsonStrObj);
+                    }
+            function resetForm() {
+            $("#Houseid").val("");
+                    $("#name").val("");
+                    $("#email").val("");
+                    $("#mobileno").val("");
+                    $("#Houseid").focus();
+                    }
+            function saveEmployee()
+                    {
+                    var jsonStr = validateAndGetFormData();
+                            if (jsonStr === "") {
+                    return;
+                            }
+                    var putReqStr = createPUTRequest("90939028|-31949284093935506|90940481",
+                            jsonStr, "People", "People-Rel");
+                            alert(putReqStr);
+                            jQuery.ajaxSetup({async: false});
+                            var resultObj = executeCommandAtGivenBaseUrl(putReqStr,
+                                    "http://api.login2explore.com:5577", "/api/iml");
+                            jQuery.ajaxSetup({async: true});
+                            alert(JSON.stringify(resultObj));
+                            resetForm();
+                            }
+        </script>
+    </body>
+</html>
