@@ -4,7 +4,7 @@ This Project explains briefly about CRUD operations using JSonPowerDB(JPDB)
 
 ## Description About JPDB
 - JPDB has ready to use API for Json documentdb, Key value DB, RDBMS, Geo Spatial and Time Series DB.
-- JPDB is a High performance, real time and simple to use Rest API based multi mode DBMS.
+- JPDB is a High performance, light weight, real time and simple to use Rest API based multi mode DBMS.
 - Any software application that needs backend database like Dynamic web appllications/Mobile/Desktop apps can be used JsonPowerDatabase.
 
 
@@ -18,6 +18,13 @@ This Project explains briefly about CRUD operations using JSonPowerDB(JPDB)
 -- Pluggable with new algorithms.
 -- Pluggable and user defined API.
 - Minimize total cost of ownership.
+
+## CRUD Operations
+### JPDB Index Manipulation Language
+- To INSERT, UPDATE and DELETE JSON Data.
+- To Insert a single record in DB PUT command is used, and for multiple records PUT_ALL command can be used.
+- To Update the UPDATE command can be used, it updates multiple records at a time and can add new column.
+- To Delete data from DB REMOVE command can be used.
 
 ## Screenshots
 
