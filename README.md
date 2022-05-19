@@ -5,6 +5,7 @@ This Project explains briefly about CRUD operations using JSonPowerDB(JPDB)
 ## Description About JPDB
 - JPDB has ready to use API for Json documentdb, Key value DB, RDBMS, Geo Spatial and Time Series DB.
 - JPDB is a High performance, real time and simple to use Rest API based multi mode DBMS.
+- Any software application that needs backend database like Dynamic web appllications/Mobile/Desktop apps can be used JsonPowerDatabase.
 
 
 ### Benefits of using JPDB 
