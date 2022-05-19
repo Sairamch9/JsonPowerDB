@@ -17,3 +17,8 @@ This Project explains briefly about CRUD operations using JSonPowerDB(JPDB)
 -- Pluggable with new algorithms.
 -- Pluggable and user defined API.
 - Minimize total cost of ownership.
+
+## Screenshots
+
+![Dashboard](https://user-images.githubusercontent.com/105830749/169245093-231fd8f5-a7d0-485f-848f-96f0fcf1a92d.JPG)
+![jsondb](https://user-images.githubusercontent.com/105830749/169245460-d4ef1785-d91a-4862-a62e-a0e74267851f.JPG)
